@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            margin: 10px;
+            padding: 10px;
+            border: 3px solid #ccc;
+            border-radius: 5px;
+        }
+        #field-2{
+            margin-top: 25px;;
+        }
+
+        .flex-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .flex-line {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+        .flex-item{
+            display: flex;
+            flex: 1;
+            gap: 10px;
+        }
+        .flex-fill{
+            flex: 1;
+        }
+        .flex-no-fill{
+            flex: 0;
+        }
+        .required-field-label::after{
+            content: " (*)";
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <fieldset id="field-1">
+        <legend>General info:</legend>
+        <form class="flex-form">
+            <div class="flex-line">
+                <div class="flex-item">
+                    <label class="required-field-label" for="name">First Name:</label>
+                    <input class="flex-fill" type="text" id="name" name="name" required>
+                </div>
+                <div class="flex-item">
+                    <label class="required-field-label" for="lastName">Last Name:</label>
+                    <input class="flex-fill" type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+            <div class="flex-line">
+                <div class="flex-item">
+                    <label class="required-field-label" for="email">Email:</label>
+                    <input class="flex-fill" type="email" id="email" name="email">
+                </div>
+                <div class="flex-item">
+                    <label class="required-field-label" for="phone">Phone:</label>
+                    <input class="flex-fill" type="tel" id="phone" name="phone" placeholder="e.g 8830-8599">
+                </div>
+            </div>
+            <div class="flex-line">
+                <div class="flex-item flex-no-fill">
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday">
+                </div>
+                <div class="flex-item flex-no-fill">
+                    <label for="age>">Age:</label>
+                    <input type="number" id="age" name="age">
+                </div>
+            </div>
+        </form>
+    </fieldset>
+
+
+    <fieldset id="field-2">
+        <legend>Address:</legend>
+        <form class="flex-form">
+            <div class="flex-line">
+                <div class="flex-item">
+                    <label for="address" class="required-field-label">Address:</label>
+                    <input class="flex-fill" type="text" id="address" name="address" placeholder="523 Av, Doral">
+                </div>
+            </div>
+            <div class="flex-line">
+                <div class="flex-item">
+                    <label for="lineAddress-1" class="required-field-label">Line Address 1:</label>
+                    <input class="flex-fill" type="text" name="lineAddress-1" id="lineAddress1">
+                </div>
+                <div class="flex-item">
+                    <label for="lineAddress-2">Line Address 2:</label>
+                    <input class="flex-fill" type="text" name="lineAddress-2" id="lineAddress2">
+                </div>
+            </div>
+            <div class="flex-line">
+                <div class="flex-item">
+                    <label for="city">City:</label>
+                    <input class="flex-fill" type="text" id="city" name="city">
+                </div>
+                <div class="flex-item">
+                    <label for="state" class="required-field-label">State:</label>
+                    <input class="flex-fill" type="text" id="state" name="state">
+                </div>
+            </div>
+            <div class="flex-line">
+                <div class="flex-item">
+                    <label for="zipCode" class="required-field-label">Zip Code:</label>
+                    <input class="flex-fill" type="text" id="zipCode" name="zipCode">
+                </div>
+                <div class="flex-item">
+                    <label for="country" class="required-field-label">Country:</label>
+                    <select name="" id="">
+                        <option value="0">Costa Rica</option>
+                        <option value="1">Honduras</option>
+                        <option value="2">USA</option>
+                        <option value="3">Mexico</option>
+                        <option value="4">Guatemala</option>
+                    </select>
+                </div>
+
+
+        </form>
+    </fieldset>
+
+    <p><span style="color: red;">(*)</span> <b>required fields</b></p>
+</body>
+</html>
