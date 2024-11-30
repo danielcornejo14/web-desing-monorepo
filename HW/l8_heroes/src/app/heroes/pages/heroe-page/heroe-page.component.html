@@ -1,0 +1,28 @@
+<div class="container">
+    @if (hero) {
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    <h1>{{ hero.superhero }}</h1>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    <h2>{{ hero.alter_ego}}</h2>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{ hero | heroImage }}" alt="{{ hero.superhero }}">
+            <mat-card-content>
+                <p><b>Primera aparición:</b> {{ hero.first_appearance }}</p>
+                <p><b>Personajes:</b> {{hero.characters}}</p>
+                <p><b>Editor:</b> {{hero.publisher}}</p>
+                <p><b>Identidad secreta:</b> {{hero.alter_ego}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="goBack()">Regresar</button>
+            </mat-card-actions>
+        </mat-card>
+
+    }
+    @else {
+        <h1>Error al cargar heroe</h1>
+    }
+</div>

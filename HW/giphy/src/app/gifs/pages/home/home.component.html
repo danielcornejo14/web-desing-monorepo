@@ -1,0 +1,35 @@
+<div class="d-flex flex-row justify-content-between">
+    <div class="d-flex flex-column w-100">
+        <div class="col-12">
+            <app-search-box></app-search-box>
+        </div>
+        <div class="col-12 pt-2">
+            <app-card-list [gifs]="gifs" gifListType="card" direction="row"></app-card-list>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column">
+        <div class="d-flex flex-column">
+            <h2>Trending</h2>
+            <button
+                type="button"
+                class="btn btn-primary"
+                (click)="loadNextTrending()"
+            >
+                Next
+            </button>
+            <app-card-list [gifs]="trendingGifs" gifListType="tile" direction="column"></app-card-list>
+        </div>
+        <div class="d-flex flex-column">
+            <h2>Random</h2>
+            <button
+                type="button"
+                class="btn btn-primary"
+                (click)="loadNextRandom()"
+            >
+                Random
+            </button>
+            <app-card-list [gifs]="randomGif" gifListType="tile" direction="column"></app-card-list>
+        </div>
+    </div>
+</div>

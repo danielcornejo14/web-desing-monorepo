@@ -1,0 +1,23 @@
+<div class="d-flex gap-3 justify-content-center" [ngClass]="
+{
+    'flex-row': direction === 'row',
+    'flex-wrap': direction === 'row',
+    'flex-column': direction === 'column'
+}
+">
+    @for (gif of gifs; track $index) {
+
+    <div>
+        @switch (gifListType) { @case ('card') {
+        <app-card [url]="gif.images.downsized_medium.url" [title]="gif.title">
+        </app-card>
+        } @case ('tile') {
+        <app-gif-tile
+            [url]="gif.images.downsized_medium.url"
+            [title]="gif.title"
+        >
+        </app-gif-tile>
+        } }
+    </div>
+    }
+</div>

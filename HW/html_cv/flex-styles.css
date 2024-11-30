@@ -1,0 +1,71 @@
+/* flex properties */
+.flex{
+    display: flex;
+}
+.f-row{
+    flex-direction: row;
+}
+.f-col{
+    flex-direction: column;
+}
+
+.f-col-mobile{
+    @media screen and (max-width: 768px){
+        flex-direction: column !important;
+        
+    }
+}
+/* flex justification */
+.f-jc-sb{
+    justify-content: space-between;
+}
+.f-jc-c{
+    justify-content: center;
+}
+.f-jc-sa{
+    justify-content: space-around;
+}
+
+/* flex alignment */
+.f-ai-c{
+    align-items: center;
+}
+.f-ai-s{
+    align-items: stretch;
+}
+
+/* flex gaps */
+
+.f-gap-1{
+    gap: 1rem;
+}
+.f-gap-2{
+    gap: 2rem;
+}
+.f-gap-3{
+    gap: 3rem;
+}
+.f-gap-4{
+    gap: 4rem;
+}
+.f-gap-5{
+    gap: 5rem;
+}
+
+/* flex grow */
+.f-grow-1{
+    flex-grow: 1;
+}
+.f-grow-2{
+    flex-grow: 2;
+}
+.f-grow-3{
+    flex-grow: 3;
+}
+.f-grow-4{
+    flex-grow: 4;
+}
+/* flex wrap */
+.f-wrap{
+    flex-wrap: wrap;
+}

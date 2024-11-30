@@ -1,0 +1,25 @@
+<div class="header">
+    <h2>Por Capital</h2>
+    <app-export-excel></app-export-excel>
+</div>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-search-box 
+            (onValue)="searchByCapital($event)"
+            placeholder="Buscar por capital"
+        >
+        </app-search-box>
+    </div>    
+</div>
+
+<div class="row">
+    <div class="col">
+        <hr>
+        <app-countries-table [countries]="countries"></app-countries-table>
+
+    </div>
+
+
+</div>

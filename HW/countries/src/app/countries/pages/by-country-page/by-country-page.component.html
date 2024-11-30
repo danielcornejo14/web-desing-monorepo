@@ -1,0 +1,24 @@
+<div class="header">
+    <h2>Por Pais</h2>
+    <app-export-excel></app-export-excel>
+</div>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-search-box 
+            (onValue)="searchByName($event)"
+            placeholder="Buscar por país"
+        >
+        </app-search-box>
+    </div>    
+</div>
+<div class="row">
+    <div class="col">
+        <hr>
+        <app-countries-table [countries]="countries"></app-countries-table>
+
+    </div>
+
+
+</div>

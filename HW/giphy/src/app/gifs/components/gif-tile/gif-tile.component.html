@@ -1,0 +1,8 @@
+<div class=" tile d-flex flex-row w-100">
+    <!-- <shared-lazy-image [url]="url" [alt]="title"></shared-lazy-image> -->
+    <img [src]="url()" [alt]="title()" class="card-img-top" />
+
+    <p class="flex-fill">
+        {{ title() || "No title" }}
+    </p>
+</div>

@@ -1,0 +1,15 @@
+<div class="card mb-2 text-center bg-dark">
+
+    <!-- <shared-lazy-image [url]="url" [alt]="title"></shared-lazy-image> -->
+    <img 
+        [src]="url" 
+        [alt]="title" 
+        class="card-img-top">
+
+    <div class="card-body text-white">
+        <p class="card-text">
+            {{ title || 'No title'}}
+        </p>
+    </div>
+
+</div>

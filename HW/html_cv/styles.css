@@ -1,0 +1,56 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+header{
+    background-color: rgb(59, 67, 86);
+    margin:0;
+    color:aliceblue;
+}
+p{
+    text-align: justify;
+}
+
+img{
+    width: 15rem;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+
+#contact-info{
+    list-style-type: none;
+    padding: 0;
+}
+
+#linkedin-link{
+    color: rgb(132, 198, 221);
+    text-decoration: none;
+}
+#linkedin-link:hover{
+    text-decoration: underline;
+}
+
+#resume{
+
+    @media screen and (max-width: 768px){
+        width: 80%;
+        
+    };
+
+    width:50%;
+    padding: 20px;
+}
+
+article>p{
+    margin-left: 15px;
+}
+
+#skill-set{
+
+    @media screen and (max-width: 768px){
+        width: 80%;
+        padding: 25px;
+    }
+
+    width:20%;
+}
